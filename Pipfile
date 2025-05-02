@@ -17,6 +17,7 @@ streamlit = "*"
 requests = "==2.25.1"
 ipython = "*"
 notebook = "*"
+werkzeug = "==2.2.2"
 
 [dev-packages]
 
