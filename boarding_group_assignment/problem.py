@@ -18,19 +18,19 @@ class CarGropProblem:
         prob = pulp.LpProblem('ClubCarProblem', pulp.LpMinimize)  # Generate Instance.
 
         # List
-        students = df_students['student_id'].tolist()  # 学生 List
-        cars = df_cars['car_id'].tolist()  # 車 List
+        students = self.df_students['student_id'].tolist()  # 学生 List
+        cars = self.df_cars['car_id'].tolist()  # 車 List
         grades = list(range(1, 5, 1))
         students_cars = [(student, car) for student in students for car in cars]  # 学生の車の Pair の List
-        licensers = df_students.loc[df_students['license'] == 1, 'student_id']  # 免許を持っている学生の List
-        students_grades = {grade: df_students.loc[df_students['grade'] == grade, 'student_id'] for grade in
+        licensers = self.df_students.loc[self.df_students['license'] == 1, 'student_id']  # 免許を持っている学生の List
+        students_grades = {grade: self.df_students.loc[self.df_students['grade'] == grade, 'student_id'] for grade in
                            grades}  # 学年が grade の学生 List
-        students_male = df_students.loc[df_students['gender'] == 0, 'student_id']
-        students_female = df_students.loc[df_students['gender'] == 1, 'student_id']
+        students_male = self.df_students.loc[self.df_students['gender'] == 0, 'student_id']
+        students_female = self.df_students.loc[self.df_students['gender'] == 1, 'student_id']
 
         # 定数
         # 車の乗車定員の定数
-        CAR_CAPACITY = df_cars['capacity'].tolist()
+        CAR_CAPACITY = self.df_cars['capacity'].tolist()
 
         # 変数
         # 学生をどの車に割り当てるかを変数として定義
