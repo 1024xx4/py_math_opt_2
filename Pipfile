@@ -19,6 +19,7 @@ ipython = "*"
 notebook = "*"
 werkzeug = "==2.2.2"
 lxml = "*"
+uvicorn = {extras = ["standard"], version = "*"}
 
 [dev-packages]
 
