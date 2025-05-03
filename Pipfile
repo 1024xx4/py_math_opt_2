@@ -20,6 +20,8 @@ notebook = "*"
 werkzeug = "==2.2.2"
 lxml = "*"
 uvicorn = {extras = ["standard"], version = "*"}
+pympler = "*"
+pytz-deprecation-shim = "*"
 
 [dev-packages]
 
