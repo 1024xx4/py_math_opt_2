@@ -17,6 +17,11 @@ streamlit = "*"
 requests = "==2.25.1"
 ipython = "*"
 notebook = "*"
+werkzeug = "==2.2.2"
+lxml = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+pympler = "*"
+pytz-deprecation-shim = "*"
 
 [dev-packages]
 
